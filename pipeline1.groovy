@@ -1,26 +1,25 @@
 pipeline {
     agent any
-
     stages {
         stage ('checkout') {
             steps {
-                git 'https://github.com/Pritam-Khergade/student-ui.git'
-                echo "pull successful"
+                git 'https://github.com/Pritam-Khergade/student-ui.git'  ------------#url of studentapp.ui
+                echo 'pull successful'
             }
         }
-        stage ('build') {
+        stage ('Build') {
             steps {
                 echo 'build successful'
             }
         }
-        steps ('testing') {
+        stage ('test') {
             steps {
                 echo 'test successful'
             }
         }
-        stage ('deoloy') {
+        stage ('deploy') {
             steps {
-                echo "deploy successful"
+                echo 'deploy successful'
             }
         }
     }
