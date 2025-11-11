@@ -1,9 +1,9 @@
 node {
-        stage ('clone') {
-             sh 'git clone   https://github.com/mayurpandit25/jenkins.git'
+        stage ('pull') {
+             sh 'git pull https://github.com/mayurpandit25/jenkins.git'
         }
         stage ('build') {
-             echo 'build successful'
+             echo 'build successfull'
         }
         stage ('test') {
              echo 'test successful'
